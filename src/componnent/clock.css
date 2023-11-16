@@ -1,0 +1,23 @@
+.clock {
+  position: absolute;
+  left: 40%;
+}
+.clock h2 {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+@media (max-width: 768px) {
+  .clock {
+    position: absolute;
+    left: 33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clock {
+    position: absolute;
+    left: 45%;
+  }
+}

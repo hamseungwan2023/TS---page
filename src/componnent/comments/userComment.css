@@ -1,0 +1,122 @@
+.commentBox {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  padding-left: 10%;
+  width: 33%;
+}
+.commentBox button {
+  position: relative;
+  border: 1px solid black;
+  width: 509px;
+  height: 30px;
+  top: 5px;
+  background-color: rgb(176, 176, 176);
+}
+.commentBox button:hover {
+  background-color: rgb(193, 193, 193);
+}
+
+.commentBox input {
+  height: 30px;
+  width: 500px;
+}
+
+.inputBox {
+  border: 1px solid black;
+  width: 508px;
+  height: 73px;
+}
+
+.commnetList {
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.comment {
+  margin-left: 3px;
+}
+@media (max-width: 768px) {
+  .commentBox {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    padding-left: 10%;
+    width: 33%;
+  }
+  .commentBox button {
+    position: relative;
+    border: 1px solid black;
+    width: 390px;
+    height: 30px;
+    top: 5px;
+    background-color: rgb(176, 176, 176);
+  }
+  .commentBox button:hover {
+    background-color: rgb(193, 193, 193);
+  }
+
+  .commentBox input {
+    height: 30px;
+    width: 380px;
+  }
+
+  .inputBox {
+    border: 1px solid black;
+    width: 388px;
+    height: 73px;
+  }
+
+  .commnetList {
+    display: flex;
+    position: relative;
+    top: 10px;
+  }
+
+  .comment {
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .commentBox {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    padding-left: 10%;
+    width: 33%;
+  }
+  .commentBox button {
+    position: relative;
+    border: 1px solid black;
+    width: 509px;
+    height: 30px;
+    top: 5px;
+    background-color: rgb(176, 176, 176);
+  }
+  .commentBox button:hover {
+    background-color: rgb(193, 193, 193);
+  }
+
+  .commentBox input {
+    height: 30px;
+    width: 500px;
+  }
+
+  .inputBox {
+    border: 1px solid black;
+    width: 508px;
+    height: 73px;
+  }
+
+  .commnetList {
+    display: flex;
+    position: relative;
+    top: 10px;
+  }
+
+  .comment {
+    margin-left: 3px;
+  }
+}

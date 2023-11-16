@@ -35,11 +35,15 @@ const UserComment = () => {
       comment: getComment,
     };
     axios
-      .post("http://localhost:5000/api/", JSON.stringify(data), {
-        headers: {
-          "Content-Type": `application/json`,
-        },
-      })
+      .post(
+        "ec2-54-226-163-236.compute-1.amazonaws.com:5000/api/",
+        JSON.stringify(data),
+        {
+          headers: {
+            "Content-Type": `application/json`,
+          },
+        }
+      )
       .then((res) => {
         console.log(res);
       });

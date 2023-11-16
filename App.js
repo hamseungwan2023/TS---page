@@ -1,17 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const messageRouter = require("./messageRoute");
-const cors = require("cors");
-const corsOption = {
-  origin: ["http://ec2-54-226-163-236.compute-1.amazonaws.com:5000/"],
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-};
+// const cors = require("cors");
+// const corsOption = {
+//   origin: ["http://ec2-54-226-163-236.compute-1.amazonaws.com:5000/"],
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// };
 const app = express();
 require("dotenv").config();
 
 app.use(express.json());
-app.use(cors(corsOption));
+// app.use(cors(corsOption));
 
 app.use("/api", messageRouter);
 

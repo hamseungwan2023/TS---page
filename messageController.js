@@ -30,13 +30,4 @@ const getMessage = async (req, res) => {
   }
 };
 
-list: async (req, res) => {
-  try {
-    const find = await message.find().exec();
-    return res.status(200).json(posts);
-  } catch (err) {
-    return res.status(500).json({ error: err });
-  }
-};
-
 module.exports = { createMessage, getMessage };

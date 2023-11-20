@@ -1,7 +1,7 @@
 import "./userComment.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-const url = "http://ec2-54-211-110-50.compute-1.amazonaws.com:5000/api";
+const url = "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api";
 // const url = "http://localhost:5000/api/";
 interface IProps {
   userName: string;

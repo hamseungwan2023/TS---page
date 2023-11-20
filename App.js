@@ -20,14 +20,14 @@ app.use(express.json());
 // app.use(cors(corsOption));
 app.use(cors());
 app.use("/api", messageRouter);
-app.use(express.static(path.join(__dirname, "../build/")));
-console.log(__dirname);
+app.use(express.static(path.join("/home/ubuntu/testman/build/")));
+// console.log(__dirname);
 // app.get("/", (req, res) => {
 //   res.send("hihi");
 // });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build/index.html"));
+  res.sendFile(path.join("/home/ubuntu/testman/build/index.html"));
 });
 
 const port = process.env.PORT || 5000;
@@ -36,8 +36,6 @@ const uri = process.env.ATLAS_URI;
 app.listen(port, (req, res) => {
   console.log(`Server running on port: ${port}`);
 });
-
-console.log(__dirname);
 
 mongoose
   .connect(uri)

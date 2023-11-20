@@ -13,10 +13,10 @@ const UserCommentList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(`${url}/test`);
+      const res = await axios.get(`${url}test`);
       // console.log(res.data[0].userName);
       // console.log(typeof res.data[0]);
-
+      console.log(res.data);
       return setData(res.data);
     };
     getData();

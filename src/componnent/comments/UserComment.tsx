@@ -75,6 +75,7 @@ const UserComment = () => {
     if (cLength >= 20 && cLength < 2) {
       return alert("2~20글자 써주세요"), setGetComment("");
     }
+    console.log("click");
     postComment();
     setGetComment("");
     setUserName("");

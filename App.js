@@ -37,6 +37,8 @@ app.listen(port, (req, res) => {
   console.log(`Server running on port: ${port}`);
 });
 
+console.log(__dirname);
+
 mongoose
   .connect(uri)
   .then(() => console.log("MongoDB connection established"))

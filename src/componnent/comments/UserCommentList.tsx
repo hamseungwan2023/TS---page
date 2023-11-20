@@ -1,7 +1,7 @@
 import "./userComment.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-const url = "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api";
+// const url = "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api";
 // const url = "http://localhost:5000/api/";
 interface IProps {
   userName: string;
@@ -13,7 +13,9 @@ const UserCommentList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(`${url}/test`);
+      const res = await axios.get(
+        "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api/test"
+      );
       // console.log(res.data[0].userName);
       // console.log(typeof res.data[0]);
       console.log("res.data", res.data);

@@ -46,7 +46,7 @@ const UserComment = () => {
         }
       )
       .then((res) => {
-        console.log(res);
+        console.log("res", res);
       });
 
     // await axios

@@ -16,7 +16,7 @@ const UserCommentList = () => {
       const res = await axios.get(`${url}test`);
       // console.log(res.data[0].userName);
       // console.log(typeof res.data[0]);
-      console.log(res.data);
+      console.log("res.data", res.data);
       return setData(res.data);
     };
     getData();

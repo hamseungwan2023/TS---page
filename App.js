@@ -20,14 +20,14 @@ app.use(express.json());
 // app.use(cors(corsOption));
 app.use(cors());
 app.use("/api", messageRouter);
-app.use(express.static(path.join(__dirname, "/build")));
-
+app.use(express.static(path.join(__dirname, "../build/")));
+console.log(__dirname);
 // app.get("/", (req, res) => {
 //   res.send("hihi");
 // });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/build/index.html"));
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 const port = process.env.PORT || 5000;

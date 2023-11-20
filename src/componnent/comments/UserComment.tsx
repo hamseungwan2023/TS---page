@@ -36,7 +36,7 @@ const UserComment = () => {
     };
     axios
       .post(
-        "ec2-54-211-110-50.compute-1.amazonaws.com:5000/api/",
+        "http://ec2-54-211-110-50.compute-1.amazonaws.com:5000/api/",
         // "http://localhost:5000/api",
         JSON.stringify(data),
         {

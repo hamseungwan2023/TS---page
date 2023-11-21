@@ -37,7 +37,6 @@ const UserComment = () => {
     axios
       .post(
         "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api",
-        // "http://localhost:5000/api",
         JSON.stringify(data),
         {
           headers: {
@@ -48,34 +47,20 @@ const UserComment = () => {
       .then((res) => {
         console.log("res", res);
       });
-
-    // await axios
-    //   .post("http://localhost:5000/", {
-    //     userName: userName,
-    //     comment: getComment,
-    //   })
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (err) {
-    //     console.log(err);
-    //   });
   };
 
   const commentOnSubmit = (e: any) => {
     e.preventDefault();
-    if (cLength == 0 && uLength == 8) {
-      return (
-        alert("이름과 댓글을 작성해주세요"), setGetComment(""), setUserName("")
-      );
+    if (cLength === 0 || uLength === 0) {
+      alert("글을 작성하세요");
+      return false;
     }
-    if (uLength >= 8 && uLength < 3) {
-      return setUserName(""), alert("이름은 3~8글자만 써주세요");
+    if (cLength > 20 || uLength > 8) {
+      alert("제한 글자를 초과 하셨습니다");
+      setGetComment("");
+      setUserName("");
+      return false;
     }
-    if (cLength >= 20 && cLength < 2) {
-      return alert("2~20글자 써주세요"), setGetComment("");
-    }
-    console.log("click");
     postComment();
     setGetComment("");
     setUserName("");

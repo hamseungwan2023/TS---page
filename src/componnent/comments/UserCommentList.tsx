@@ -1,14 +1,13 @@
 import "./userComment.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// const url = "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api";
-// const url = "http://localhost:5000/api/";
 interface IProps {
   userName: string;
   comment: string;
 }
 
 const UserCommentList = () => {
+  // console.log(1);
   let [data, setData] = useState<any>([]);
 
   useEffect(() => {
@@ -16,9 +15,7 @@ const UserCommentList = () => {
       const res = await axios.get(
         "http://ec2-3-93-0-198.compute-1.amazonaws.com:5000/api/test"
       );
-      // console.log(res.data[0].userName);
-      // console.log(typeof res.data[0]);
-      console.log("res.data", res.data);
+      // console.log("res.data", res.data);
       return setData(res.data);
     };
     getData();
@@ -32,15 +29,15 @@ const UserCommentList = () => {
               return (
                 <div>
                   <div className="commnetList">
-                    <p className="userName"> {`${e.userName} :`}</p>
-                    <p className="comment"> {e.comment}</p>
+                    <p className="userName"> {`${e.userName}`}</p>
+                    <p className="comment"> :{e.comment}</p>
                   </div>
-                  {/* <div className="userComment">{e.comment}</div> */}
                 </div>
               );
             })
           : null}
       </div>
+      {}
     </div>
   );
 };
